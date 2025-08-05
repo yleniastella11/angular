@@ -1,0 +1,59 @@
+.app-header {
+  position: fixed; /* Toujours en haut */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333; /* Ou une autre couleur */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* petit effet d'ombre */
+  z-index: 1000; /* au-dessus du reste */
+}
+
+.logo img {
+  height: 50px; /* taille du logo */
+}
+
+.nav-links ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.search input {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search button {
+  margin-left: 5px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #0056b3;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Pour éviter que le header cache le contenu */
+body {
+  margin: 0;
+  padding-top: 80px; /* hauteur du header */
+  overflow-x: hidden; /* empêche la barre horizontale */
+}

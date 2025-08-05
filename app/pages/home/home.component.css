@@ -1,0 +1,79 @@
+/* Général */
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* Centre verticalement */
+  align-items: center;  /* Centre horizontalement */
+  height: 100vh;  /* Prend toute la hauteur de la fenêtre */
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);  /* Dégradé coloré */
+  text-align: center;
+  padding: 0 20px;  /* Pour ne pas avoir de marges latérales */
+}
+
+/* Logo */
+.home img {
+  width: 150px;  /* Taille du logo */
+  height: auto;
+  margin-bottom: 20px;  /* Réduit l'espace entre le logo et le texte */
+  border-radius: 50%;  /* Logo circulaire */
+  border: 5px solid #fff;  /* Bordure blanche pour un effet clean */
+  padding: 10px;  /* Un peu de padding pour l'effet bordure */
+}
+
+/* Titre */
+.home h1 {
+  font-size: 3rem;  /* Taille du titre */
+  font-weight: bold;
+  color: #333;  /* Couleur sombre pour le titre */
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);  /* Ombre légère pour le titre */
+}
+
+/* Paragraphe de description */
+.home p {
+  font-size: 1.2rem;
+  color: #555;  /* Gris clair pour le texte */
+  margin-bottom: 30px;
+  line-height: 1.6;  /* Espacement des lignes pour améliorer la lisibilité */
+  max-width: 600px;  /* Limite la largeur du texte pour éviter qu'il ne s'étende trop */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Bouton */
+.btn-primary {
+  display: inline-block;
+  background-color: #007BFF;  /* Bleu clair */
+  color: white;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border-radius: 30px;  /* Coins arrondis */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Ombre douce sous le bouton */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;  /* Couleur plus foncée au survol */
+  transform: translateY(-3px);  /* Légère élévation au survol */
+}
+
+/* Responsive : ajustements pour les écrans plus petits */
+@media (max-width: 768px) {
+  .home h1 {
+    font-size: 2.5rem;  /* Réduit la taille du titre */
+  }
+
+  .home p {
+    font-size: 1rem;  /* Réduit la taille du texte */
+  }
+
+  .btn-primary {
+    padding: 12px 30px;  /* Réduit la taille du bouton */
+    font-size: 1rem;
+  }
+
+  .home img {
+    width: 120px;  /* Réduit la taille du logo */
+  }
+}

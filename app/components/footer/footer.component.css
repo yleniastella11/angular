@@ -1,0 +1,24 @@
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;  /* S'assurer qu'il occupe toute la largeur */
+  background-color: #333;  /* Exemple de fond pour le footer */
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+    
+.socials {
+    margin-top: 5px;
+}
+    
+.socials a {
+    color: white;
+    margin: 0 8px;
+    text-decoration: none;
+}
+    
+.socials a:hover {
+    text-decoration: underline;
+}

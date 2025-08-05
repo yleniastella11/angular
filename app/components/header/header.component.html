@@ -1,0 +1,26 @@
+<header class="app-header">
+  <div class="logo">
+    <a routerLink="/">
+      <img src="assets/img/favicon.png" alt="Favicon" />
+    </a>
+  </div>
+  
+    <nav class="nav-links">
+      <ul>
+        <li><a routerLink="/">Accueil</a></li>
+        <li><a routerLink="/products">Produits</a></li>
+        <li><a routerLink="/about">À propos</a></li>
+        <li><a routerLink="/contact">Contact</a></li>
+      </ul>
+    </nav>
+  
+    <div class="search">
+      <input 
+        type="text" 
+        [(ngModel)]="searchTerm" 
+        placeholder="Recherche..." 
+        (keyup.enter)="searchProduct()"
+      />
+      <button (click)="searchProduct()">🔍</button>
+    </div>
+  </header>
