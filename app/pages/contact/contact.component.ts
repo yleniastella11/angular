@@ -1,16 +1,24 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
+  standalone: true,
+  imports: [CommonModule, FormsModule],
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent {
+  contact = {
+    name: '',
+    email: '',
+    message: ''
+  };
 
-  // Méthode qui est appelée lors de la soumission du formulaire
-  onSubmit(event: Event): void {
-    event.preventDefault(); // Empêche le rechargement de la page
-    console.log('Formulaire soumis');
-    // Ici, tu peux ajouter des actions comme l'envoi des données du formulaire
+  sendMessage() {
+    console.log('Formulaire envoyé :', this.contact);
+    alert('Message envoyé !');
+    this.contact = { name: '', email: '', message: '' };
   }
 }

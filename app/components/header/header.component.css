@@ -7,7 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 30px;
+  padding: 5px 30px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* petit effet d'ombre */
   z-index: 1000; /* au-dessus du reste */
 }

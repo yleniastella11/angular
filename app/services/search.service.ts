@@ -6,11 +6,11 @@ import { Injectable } from '@angular/core';
 export class SearchService {
   private searchTerm: string = '';
 
-  setSearchTerm(term: string) {
+  setSearchTerm(term: string): void {
     this.searchTerm = term;
   }
 
-  getSearchTerm() {
+  getSearchTerm(): string {
     return this.searchTerm;
   }
 }

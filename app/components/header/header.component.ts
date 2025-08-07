@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
+import { RouterModule, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { RouterModule, Router } from '@angular/router';
 import { SearchService } from '../../services/search.service';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, FormsModule, RouterModule], // ✅ nécessaire pour routerLink et ngModel
+  imports: [CommonModule, RouterModule, FormsModule],
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css'] // ✅ corrigé
+  styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
   searchTerm: string = '';
@@ -19,7 +19,7 @@ export class HeaderComponent {
   searchProduct() {
     if (this.searchTerm.trim()) {
       this.searchService.setSearchTerm(this.searchTerm);
-      this.router.navigate(['/products']);
+      this.router.navigate(['/product']);
     }
   }
 }
