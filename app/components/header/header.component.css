@@ -1,19 +1,19 @@
 .app-header {
-  position: fixed; /* Toujours en haut */
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #333; /* Ou une autre couleur */
+  background-color: #151217; /* fond sombre */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 5px 30px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* petit effet d'ombre */
-  z-index: 1000; /* au-dessus du reste */
+  padding: 10px 20px;
+  color: white;
 }
 
 .logo img {
-  height: 50px; /* taille du logo */
+  height: 50px;
+  transition: transform 0.2s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
 }
 
 .nav-links ul {
@@ -26,34 +26,44 @@
 
 .nav-links a {
   text-decoration: none;
-  color: white;
+  color: #FDD90B;
   font-weight: bold;
+  font-family: 'Comfortaa', sans-serif;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #DA001E;
 }
 
 .search {
   display: flex;
   align-items: center;
+  gap: 5px;
 }
 
 .search input {
   padding: 5px 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border: 2px solid #FDD90B;
+  border-radius: 5px;
+  outline: none;
+  font-family: 'Comfortaa', sans-serif;
+}
+
+.search input:focus {
+  border-color: #DA001E;
 }
 
 .search button {
-  margin-left: 5px;
-  padding: 5px 10px;
+  background-color: #FDD90B;
   border: none;
-  background-color: #0056b3;
-  color: white;
-  border-radius: 4px;
+  padding: 6px 10px;
+  border-radius: 5px;
   cursor: pointer;
+  font-size: 14px;
 }
 
-/* Pour éviter que le header cache le contenu */
-body {
-  margin: 0;
-  padding-top: 80px; /* hauteur du header */
-  overflow-x: hidden; /* empêche la barre horizontale */
+.search button:hover {
+  background-color: #DA001E;
+  color: white;
 }

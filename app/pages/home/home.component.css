@@ -2,22 +2,23 @@
 .main-container {
   display: flex;
   flex-direction: column; /* Aligne le logo en haut et les sections en dessous */
-  justify-content: flex-start; /* Aligne tout au top */
-  align-items: center; /* Centre tout horizontalement */
-  height: 100vh; /* Prend toute la hauteur de la fenêtre */
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: #F9D0A3; /* fond général peach */
 }
 
 /* Logo centré en haut */
 .logo-container {
-  margin-top: 50px; /* Espacement depuis le haut */
+  margin-top: 50px;
   text-align: center;
 }
 
 .logo-container img {
-  width: 250px; /* Limite la taille du logo */
+  width: 250px;
   height: auto;
   object-fit: contain;
 }
@@ -25,101 +26,107 @@
 /* Conteneur des sections (home et about) */
 .sections-container {
   display: flex;
-  width: 100%; /* Occupe toute la largeur */
-  height: calc(100vh - 100px); /* Remplir le reste de la hauteur après le logo */
-  padding: 0 20px; /* Un peu de marge pour l'espacement */
+  width: 100%;
+  height: calc(100vh - 100px);
+  padding: 0 20px;
   box-sizing: border-box;
-  justify-content: space-between; /* Espace égal entre les deux sections */
-  align-items: stretch; /* Les sections occupent toute la hauteur */
+  justify-content: space-between;
+  align-items: stretch;
 }
 
 /* Style de la section Home */
 .home {
-  flex: 1; /* Chaque section occupe 50% de la largeur */
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #f5f5f5;
+  background-color: #FDD90B; /* jaune */
   text-align: center;
   padding: 20px;
-  max-height: 500px; /* Limite la hauteur de la section home */
-  overflow: hidden; /* Empêche le débordement du contenu */
+  max-height: 500px;
+  overflow: hidden;
+  border-radius: 15px;
 }
 
 .home h1 {
   font-size: 2.5rem;
-  color: #333;
+  color: #DA001E; /* rouge */
   font-weight: 600;
+  font-family: 'Bubbleboddy Neue', sans-serif;
 }
 
 .home p {
   font-size: 1.5rem;
-  color: #777;
+  color: #151217; /* texte noir foncé */
   margin-top: 20px;
+  font-family: 'Comfortaa', sans-serif;
 }
 
 .home .btn-primary {
   padding: 15px 30px;
-  background-color: #5c9be8;
-  color: white;
+  background-color: #151217; /* noir foncé */
+  color: #FDD90B; /* jaune */
   text-decoration: none;
   font-weight: 600;
-  border-radius: 30px;  /* Bords arrondis pour le bouton */
+  border-radius: 30px;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .home .btn-primary:hover {
-  background-color: #4a8fd4;
+  background-color: #DA001E; /* rouge */
+  color: #FFFFFF;
   transform: translateY(-2px);
 }
 
 /* Style de la section À propos */
 .about {
-  flex: 1; /* Prend 50% de la largeur */
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #ffffff;
+  background-color: #F9D0A3; /* peach */
   text-align: center;
   padding: 20px;
-  max-height: 500px; /* Limite la hauteur de la section about */
-  overflow: hidden; /* Empêche le débordement du contenu */
+  max-height: 500px;
+  overflow: hidden;
+  border-radius: 15px;
 }
 
 .about h1 {
   font-size: 2.5rem;
-  color: #333;
+  color: #DA001E; /* rouge */
   margin-bottom: 20px;
+  font-family: 'Bubbleboddy Neue', sans-serif;
 }
 
 .about p {
   font-size: 1.2rem;
-  color: #555;
+  color: #151217; /* texte noir foncé */
   line-height: 1.6;
   margin-bottom: 20px;
-  max-width: 80%; /* Limite la largeur des textes pour les rendre plus lisibles */
+  max-width: 80%;
+  font-family: 'Comfortaa', sans-serif;
 }
 
 /* Responsivité : Quand l'écran est petit, on empile les sections */
 @media (max-width: 768px) {
   .sections-container {
-    flex-direction: column;  /* Les sections s'empilent verticalement */
-    height: auto;  /* Ajuste la hauteur sur mobile */
+    flex-direction: column;
+    height: auto;
   }
 
   .home h1,
   .about h1 {
-    font-size: 2rem;  /* Réduit la taille des titres pour mobile */
+    font-size: 2rem;
   }
 
   .home p,
   .about p {
-    font-size: 1rem;  /* Réduit la taille du texte pour mobile */
+    font-size: 1rem;
   }
 
-  /* Limite la hauteur des sections sur mobile également */
   .home,
   .about {
     max-height: 400px;

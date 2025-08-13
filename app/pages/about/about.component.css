@@ -1,0 +1,36 @@
+.about-container {
+  display: flex;
+  flex-direction: column; /* contenu en colonne */
+  align-items: center;    /* centrage horizontal */
+  justify-content: center; /* centrage vertical */
+  min-height: 80vh;       /* prend presque toute la hauteur de la page */
+  text-align: center;     /* texte centré */
+  padding: 20px;
+  background-color: #F9D0A3; /* fond clair de la charte */
+  font-family: 'Comfortaa', sans-serif;
+}
+
+.about-container h1 {
+  font-family: 'Bubbleboddy Neue', cursive;
+  font-size: 2.5rem;
+  color: #151217;
+  margin-bottom: 20px;
+}
+
+.about-container p {
+  max-width: 700px; /* limite la largeur du texte */
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #151217;
+}
+
+.about-container strong {
+  color: #DA001E; /* rouge de la charte */
+}
+
+.about-container img {
+  margin-top: 20px;
+  border: 3px solid #FDD90B; /* jaune de la charte */
+  border-radius: 10px;
+}

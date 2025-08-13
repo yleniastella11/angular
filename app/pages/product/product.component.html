@@ -1,13 +1,11 @@
-<!-- Barre de recherche -->
 <div class="search-bar">
   <input 
     type="text" 
     [(ngModel)]="searchTerm" 
-    placeholder="Rechercher une figurine..." 
+    placeholder="Rechercher une figurine..."
   />
 </div>
 
-<!-- Boutons de tri -->
 <div class="sort-buttons">
   <button (click)="sortProducts('asc')">Trier par prix croissant</button>
   <button (click)="sortProducts('desc')">Trier par prix décroissant</button>
@@ -15,24 +13,28 @@
 
 <hr>
 
-<!-- Liste des produits filtrés -->
 <div class="product-list">
   <div class="product-card" *ngFor="let product of filteredProducts">
     <h3>{{ product.name }}</h3>
-    <p>Prix : {{ product.price | currency }}</p>
+    <p>Prix : {{ product.price | currency:'EUR' }}</p>
+
+    <!-- Lien vers la fiche détail -->
+    <a [routerLink]="['/product', product.id]" class="details-link">
+      Voir la fiche détail
+    </a>
+
     <button (click)="addToCart(product)">Ajouter au panier</button>
   </div>
 </div>
 
 <hr>
 
-<!-- Panier -->
 <div class="cart" *ngIf="cart.length > 0">
   <h3>🛒 Panier</h3>
   <ul>
     <li *ngFor="let item of cart">
-      {{ item.name }} - {{ item.quantity }} x {{ item.price | currency }}
+      {{ item.name }} - {{ item.quantity }} x {{ item.price | currency:'EUR' }}
     </li>
   </ul>
-  <p><strong>Total :</strong> {{ totalCartPrice | currency }}</p>
+  <p><strong>Total :</strong> {{ totalCartPrice | currency:'EUR' }}</p>
 </div>

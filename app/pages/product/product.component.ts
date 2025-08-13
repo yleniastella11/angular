@@ -1,33 +1,28 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';  // <-- à ajouter
 
 @Component({
   selector: 'app-products',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, RouterModule], // <-- ajouter RouterModule
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent {
 
-  // Liste des produits
-  products: { name: string; price: number }[] = [
-    { name: 'Figurine Astérix', price: 19.99 },
-    { name: 'Figurine Obélix', price: 24.99 },
-    { name: 'Figurine Idéfix', price: 14.99 }
+  // Liste des produits avec ID
+  products: { id: number; name: string; price: number }[] = [
+    { id: 1, name: 'Figurine Astérix', price: 19.99 },
+    { id: 2, name: 'Figurine Obélix', price: 24.99 },
+    { id: 3, name: 'Figurine Idéfix', price: 14.99 }
   ];
 
-  // Recherche
   searchTerm: string = '';
-
-  // Panier
-  cart: { name: string; price: number; quantity: number }[] = [];
-
-  // Tri
+  cart: { id: number; name: string; price: number; quantity: number }[] = [];
   sortOrder: string = '';
 
-  // Tri des produits
   sortProducts(order: string) {
     this.sortOrder = order;
     if (order === 'asc') {
@@ -37,7 +32,6 @@ export class ProductComponent {
     }
   }
 
-  // Filtrer les produits
   get filteredProducts() {
     const term = this.searchTerm?.toLowerCase() || '';
     return this.products.filter(product =>
@@ -45,9 +39,8 @@ export class ProductComponent {
     );
   }
 
-  // Ajouter au panier
-  addToCart(product: { name: string; price: number }) {
-    const existingProduct = this.cart.find(item => item.name === product.name);
+  addToCart(product: { id: number; name: string; price: number }) {
+    const existingProduct = this.cart.find(item => item.id === product.id);
     if (existingProduct) {
       existingProduct.quantity++;
     } else {
@@ -55,7 +48,6 @@ export class ProductComponent {
     }
   }
 
-  // Total du panier
   get totalCartPrice() {
     return this.cart.reduce((total, item) => total + item.price * item.quantity, 0);
   }

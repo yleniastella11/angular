@@ -3,22 +3,25 @@ footer {
   bottom: 0;
   left: 0;
   width: 100%;  /* S'assurer qu'il occupe toute la largeur */
-  background-color: #333;  /* Exemple de fond pour le footer */
-  color: white;
+  background-color: #151217;  /* noir foncé de la charte */
+  color: #F9D0A3;  /* texte clair peach pour le contraste */
   text-align: center;
   padding: 20px;
 }
     
 .socials {
-    margin-top: 5px;
+  margin-top: 5px;
 }
     
 .socials a {
-    color: white;
-    margin: 0 8px;
-    text-decoration: none;
+  color: #FDD90B;  /* jaune charte pour les liens */
+  margin: 0 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
 }
     
 .socials a:hover {
-    text-decoration: underline;
+  color: #DA001E;  /* rouge charte au survol */
+  text-decoration: none;
 }

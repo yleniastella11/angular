@@ -1,24 +1,35 @@
+:host {
+  display: block;
+  min-height: 100vh; /* Prend toute la hauteur */
+  background-color: #F9D0A3; /* Fond sombre de la page */
+  padding: 20px;
+  box-sizing: border-box;
+  color: #F9D0A3; /* Couleur du texte par défaut */
+}
+
 form {
   max-width: 600px;
   margin: 40px auto;
   padding: 30px;
-  background-color: #f9f9f9;
+  background-color: #FDD90B; /* peach */
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Comfortaa', sans-serif;
+  color: #151217; /* texte noir foncé */
 }
 
 h2 {
   text-align: center;
-  color: #333;
+  color: #DA001E; /* rouge */
   margin-bottom: 25px;
+  font-family: 'Bubbleboddy Neue', sans-serif;
 }
 
 label {
   display: block;
   margin-top: 15px;
   margin-bottom: 5px;
-  color: #555;
+  color: #151217; /* texte noir foncé */
   font-weight: 500;
 }
 
@@ -26,17 +37,18 @@ input,
 textarea {
   width: 100%;
   padding: 12px 15px;
-  border: 1px solid #ccc;
+  border: 1px solid #151217; /* noir foncé */
   border-radius: 8px;
   font-size: 16px;
   background-color: #fff;
+  color: #151217;
   transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 input:focus,
 textarea:focus {
-  border-color: #82b1ff;
-  box-shadow: 0 0 0 3px rgba(130, 177, 255, 0.2);
+  border-color: #DA001E; /* rouge */
+  box-shadow: 0 0 0 3px rgba(218, 0, 30, 0.2); /* rouge léger */
   outline: none;
 }
 
@@ -49,17 +61,19 @@ button {
   margin-top: 20px;
   width: 100%;
   padding: 12px;
-  background-color: #82b1ff;
-  color: white;
+  background-color: #FDD90B; /* jaune */
+  color: #151217; /* texte noir foncé */
   border: none;
   border-radius: 8px;
   font-size: 16px;
+  font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 button:hover:not(:disabled) {
-  background-color: #5f9eff;
+  background-color: #DA001E; /* rouge */
+  color: #fff;
 }
 
 button:disabled {
